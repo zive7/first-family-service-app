@@ -1,0 +1,56 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.CovidTeam>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	Layout = "Master.cshtml";
+}
+
+<!DOCTYPE HTML>
+
+		<!-- Jumbotron, w title -->
+		<div class="jumbotron text-center jumbotron-fluid">
+			<div class="container">
+				<h1>@Model.Value("covidTeamTitle")</h1>
+				<p>The safest way to protect your family from the Covid outbreak.</p>
+			</div>
+		</div>
+
+		<!-- Main container -->
+
+		<!-- Blogpost meta data -->
+		<div class="container-fluid grey-bg">
+			<div class="container">
+				<div class="row section">
+					<div class="col-md-6">
+						<div class="meta-author media p-3">
+							<div class="media-body">
+							    <h3>Direct Support Services</h3>
+								<p>At 1st Choice Family Services, you’re the boss. Every single service is designed to give you the perfect balance of support and independence.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row section">
+					<div class="col-md-6">
+						<div class="meta-author media p-3">
+							<div class="media-body">
+							    <h3>Remote Monitoring</h3>
+								<p>Remote monitoring services help you stay safe at all times while maintaining independence.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row section">
+					<div class="col-md-6">
+						<div class="meta-author media p-3">
+							<div class="media-body">
+							    <h3>Covid Rapid Response Team</h3>
+								<p>Stay safe and protected even during a pandemic with our quick response team.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	

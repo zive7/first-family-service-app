@@ -1,0 +1,158 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@using Umbraco.Cms.Core.Models.PublishedContent;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = null;
+}
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>1st Choice Family Services</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="/css/main.css" />
+	</head>
+	
+	<body>
+
+		<!-- Navigation -->
+		<div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+              <a class="navbar-brand" href="/">1st Choice Family Services</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="/about-us">About us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/contact-us">Contact us</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Our Services
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="/our-services">Our Services</a>
+                      <a class="dropdown-item" href="/remote-monitoring">Remote monitoring</a>
+                      <a class="dropdown-item" href="/direct-support">Direct support</a>
+                      <a class="dropdown-item" href="/covid-team">COVID Rapid Response Team</a>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Blogs
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="/blogs">Blogs</a>
+                      <a class="dropdown-item" href="/press-release">Press Release</a>
+                    </div>
+                  </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+ 				    <a class="btn btn-info mr-3" role="button" href="https://zoom.us/j/5707658197">Get Live Support</a>
+    				<a class="btn btn-info" role="button" href="tel:(614) 321-2430">Call Now</a>
+                </form>
+              </div>
+            </nav>
+		</div>
+		
+	        @RenderBody()
+	
+		<!-- Footer -->
+        <footer class="text-center text-lg-start bg-light text-muted">
+          <!-- Section: Links  -->
+          <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+            <div class="container text-center text-md-start mt-5">
+              <!-- Grid row -->
+              <div class="row mt-3">
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                  <!-- Content -->
+                  <h6 class="text-uppercase fw-bold mb-4">
+                    <i class="fas fa-gem me-3"></i>1st Choice Family Services
+                  </h6>
+                  <p>
+                    We help people with Developmental Disabilities  connect with expert Direct Support Professionals who help them live their best life.
+                  </p>
+                </div>
+                <!-- Grid column -->
+        
+                <!-- Grid column -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                  <!-- Links -->
+                  <h6 class="text-uppercase fw-bold mb-4">
+                    Quick Links
+                  </h6>
+                  <p>
+                    <a href="/about-us" class="text-reset">About Us</a>
+                  </p>
+                  <p>
+                    <a href="/contact-us" class="text-reset">Contact Us</a>
+                  </p>
+                  <p>
+                    <a href="/direct-support" class="text-reset">Direct Support</a>
+                  </p>
+                  <p>
+                    <a href="/blogs" class="text-reset">Blogs</a>
+                  </p>
+                </div>
+                <!-- Grid column -->
+        
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                  <!-- Links -->
+                  <h6 class="text-uppercase fw-bold mb-4">
+                    Useful links
+                  </h6>
+                  <p>
+                    <a href="tel:(614) 321-2430" class="text-reset">Call Now</a>
+                  </p>
+                  <p>
+                    <a href="https://zoom.us/j/5707658197" class="text-reset">Get Live Support</a>
+                  </p>
+                </div>
+                <!-- Grid column -->
+        
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                  <!-- Links -->
+                  <h6 class="text-uppercase fw-bold mb-4">
+                    Corporate Address
+                  </h6>
+                  <p><i class="fas fa-home me-3"></i> 175 S.3rd Street Suite 200 Columbus</p>
+                  <p><i class="fas fa-home me-3"></i> Ohio 43215</p>
+                  <p>
+                    <i class="fas fa-envelope me-3"></i>
+                    info@1stchoicefamilyservices.org
+                  </p>
+                  <p><i class="fas fa-phone me-3"></i> <a href="tel:(614) 321-2430">614 321 2430</a></p>
+                </div>
+                <!-- Grid column -->
+              </div>
+              <!-- Grid row -->
+            </div>
+          </section>
+          <!-- Section: Links  -->
+        
+          <!-- Copyright -->
+          <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            @Model.Value("footerText", fallback: Fallback.ToAncestors)
+          </div>
+          <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+	
+	<!-- Scripts -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	
+	</body>
+</html>

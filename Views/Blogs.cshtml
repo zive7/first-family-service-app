@@ -1,0 +1,114 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.Blogs>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	Layout = "Master.cshtml";
+}
+
+		<!-- Jumbotron, w title -->
+		<div class="jumbotron text-center jumbotron-fluid">
+			<div class="container">
+				<h1 class="display-1">@Model.Value("blogsTitle")</h1>
+				<p>What we do when we do what we do - and why!</p>
+			</div>
+		</div>
+
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-lg-8 col-md-12 left-box">
+                
+                @{
+                    	var selection = Umbraco.Content(Guid.Parse("dfdbd057-0919-4b87-9cba-cc78d97efbc4"))
+                                        .ChildrenOfType("blogItem")
+                                        .Where(x => x.IsVisible())
+                                        .OrderByDescending(x => x.CreateDate);
+                }
+            	@foreach (var item in selection)
+            	{
+            	   <div class="card single_post">
+                        <div class="body">
+                            <div class="img-post">
+                                <img class="d-block img-fluid" src="https://via.placeholder.com/800x280/FFB6C1/000000" alt="First slide">
+                            </div>
+                            <h3><a href="@item.Url()">All photographs are accurate</a></h3>
+                            <p>@Html.Truncate(item.Value("blogItemBodyText").ToString(), 20, true)</p>
+                        </div>
+                        <div class="post_footer">
+                            <div class="actions">
+                                <a href="@item.Url()" class="btn btn-outline-secondary">Continue Reading</a>
+                            </div>
+                            <ul class="stats">
+                                <li><a href="@item.Url()">@item.Name()</a></li>
+                                <li><a href="#">@item.CreateDate</a></li>
+                            </ul>
+                        </div>
+                    </div>
+            	}
+                
+                <ul class="pagination pagination-primary">
+                    <li class="page-item"><a class="page-link" href="javascript:void(0);">Previous</a></li>
+                    <li class="page-item active"><a class="page-link" href="javascript:void(0);">1</a></li>
+                    <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
+                    <li class="page-item"><a class="page-link" href="javascript:void(0);">3</a></li>
+                    <li class="page-item"><a class="page-link" href="javascript:void(0);">Next</a></li>
+                </ul>                
+            </div>
+            <div class="col-lg-4 col-md-12 right-box">
+                <div class="card">
+                    <div class="body search">
+                        <div class="input-group m-b-0">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-search"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Search...">                                    
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="header">
+                        <h2>Categories Clouds</h2>
+                    </div>
+                    <div class="body widget">
+                        <ul class="list-unstyled categories-clouds m-b-0">
+                            <li><a href="javascript:void(0);">eCommerce</a></li>
+                            <li><a href="javascript:void(0);">Microsoft Technologies</a></li>
+                            <li><a href="javascript:void(0);">Creative UX</a></li>
+                            <li><a href="javascript:void(0);">Wordpress</a></li>
+                            <li><a href="javascript:void(0);">Angular JS</a></li>
+                            <li><a href="javascript:void(0);">Enterprise Mobility</a></li>
+                            <li><a href="javascript:void(0);">Website Design</a></li>
+                            <li><a href="javascript:void(0);">HTML5</a></li>
+                            <li><a href="javascript:void(0);">Infographics</a></li>
+                            <li><a href="javascript:void(0);">Wordpress Development</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="header">
+                        <h2>Popular Posts</h2>                        
+                    </div>
+                    <div class="body widget popular-post">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="single_post">
+                                    <p class="m-b-0">Apple Introduces Search Ads Basic</p>
+                                    <span>jun 22, 2022</span>
+                                    <div class="img-post">
+                                        <img src="https://via.placeholder.com/280x280/FFB6C1/000000" alt="Awesome Image">                                        
+                                    </div>                                            
+                                </div>
+                                <div class="single_post">
+                                    <p class="m-b-0">new rules, more cars, more races</p>
+                                    <span>jun 8, 2022</span>
+                                    <div class="img-post">
+                                        <img src="https://via.placeholder.com/280x280/FFB6C1/000000" alt="Awesome Image">                                            
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
